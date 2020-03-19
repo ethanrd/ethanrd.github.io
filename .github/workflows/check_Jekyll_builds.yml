@@ -26,3 +26,5 @@ jobs:
       # Build HTML from Markdown in repo
       - name: Build Jekyll site.
         uses: meitar/jekyll-builder-for-github-pages-action@v1
+        with:
+          jekyll_build_opts: --trace
