@@ -15,14 +15,20 @@ on:
 
 jobs:
   # Job to test that web page docs build
-  build_conventions:
-    name: Test the build of web page docs
+  jekyll_build:
+    name: Jekyll build of web page docs
     runs-on: ubuntu-latest
+
     steps:
-      # Check out PR
-      - uses: actions/checkout@v2
-      # Create build directory
-      - run: mkdir web_pages_build
-      # Build HTML from Markdown in repo
-      - name: Build Jekyll site.
-        uses: meitar/jekyll-builder-for-github-pages-action@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build site with Jekyll
+        uses: jerryjvl/jekyll-build-action@v1
+
+      # Upload artifact containing cf-conventions.html, cf-conventions.pdf
+      - name: Upload website artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: Compiled Jekyll Pages
+          path: ./_site/
