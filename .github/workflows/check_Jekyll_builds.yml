@@ -26,7 +26,6 @@ jobs:
       - name: Build site with Jekyll
         uses: jerryjvl/jekyll-build-action@v1
 
-      # Upload artifact containing cf-conventions.html, cf-conventions.pdf
       - name: Upload website artifact
         uses: actions/upload-artifact@v1
         with:
