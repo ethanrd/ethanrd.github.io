@@ -6,3 +6,5 @@ title: More
 Some text.
 More text.
 And even more text.
+
+[Home](./index.md)
