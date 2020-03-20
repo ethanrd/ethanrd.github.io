@@ -2,7 +2,6 @@ title: Ethan's Site
 description: Ethan's Site
 url: https://ethanrd.github.io
 repository: ethanrd/ethanrd.github.io
-baseurl: "."
 
 markdown: kramdown
 
