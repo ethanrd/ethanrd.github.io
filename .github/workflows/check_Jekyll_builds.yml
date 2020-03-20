@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name Create build directory
+      - name: Create build directory
         run: mkdir -v web_pages_build
 
       # Build HTML from Markdown in repo
