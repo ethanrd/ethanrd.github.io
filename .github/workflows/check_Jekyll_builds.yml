@@ -26,3 +26,28 @@ jobs:
       # Build HTML from Markdown in repo
       - name: Build Jekyll site.
         uses: meitar/jekyll-builder-for-github-pages-action@v1
+
+  jekyll_build:
+    name: Jekyll build of web page docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create build directory
+        run: mkdir -v web_pages_build
+
+      # Build HTML from Markdown in repo
+      - name: Build site with Jekyll
+        uses: meitar/jekyll-builder-for-github-pages-action@v1
+        with:
+          source: ./
+          destination: ./web_pages_build/
+
+      # Upload artifact containing cf-conventions.html, cf-conventions.pdf
+      - name: Upload website artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: Compiled Jekyll Pages
+          path: ./web_pages_build/
