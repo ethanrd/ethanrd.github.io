@@ -1,4 +1,6 @@
 ---
+layout: default
+title: Main
 ---
 # Main page of My GitHub Pages
 Hi
