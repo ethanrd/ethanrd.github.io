@@ -1,3 +1,7 @@
+---
+layout: default
+title: README
+---
 # ethanrd.github.io
 For me to test GitHub Pages
 * TOC
