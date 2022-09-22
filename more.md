@@ -3,7 +3,7 @@ layout: default
 title: More
 ---
 # More
-
+{:.no_toc}
 Some text.
 More text.
 And even more text.
