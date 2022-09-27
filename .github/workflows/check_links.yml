@@ -7,26 +7,34 @@ on:
   workflow_dispatch:
 
 jobs:
-  check_links:
-    name: Check Markdown links
+  markdown-link-check:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Check links
-        uses: lycheeverse/lychee-action@v1.0.4
-
-      - name: Upload report
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v1
+      - uses: actions/checkout@main
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          name: Link check report
-          path: ./lychee/out.md
+          use-verbose-mode: 'yes'
 
-      - name: Create Issue From File
-        uses: peter-evans/create-issue-from-file@v4.0.0
-        with:
-          title: Link Checker Report
-          content-filepath: ./lychee/out.md
-          labels: report, automated issue
+#  check_links:
+#    name: Check Markdown links
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      - name: Check links
+#        uses: lycheeverse/lychee-action@v1.0.4
+#
+#      - name: Upload report
+#        if: ${{ always() }}
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: Link check report
+#          path: ./lychee/out.md
+#
+#      - name: Create Issue From File
+#        uses: peter-evans/create-issue-from-file@v4.0.0
+#        with:
+#          title: Link Checker Report
+#          content-filepath: ./lychee/out.md
+#          labels: report, automated issue
