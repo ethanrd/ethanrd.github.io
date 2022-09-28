@@ -1,6 +1,7 @@
 ---
 layout: default
 title: More
+permalink: more.html
 ---
 # More
 {:.no_toc}

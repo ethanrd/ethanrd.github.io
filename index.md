@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Main
+permalink: index.html
 ---
 # Main page of My GitHub Pages
 Hi
