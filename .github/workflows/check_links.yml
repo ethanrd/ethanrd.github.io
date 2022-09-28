@@ -25,9 +25,9 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v1.0.4
         with:
-          args: --verbose './**/*.md' './**/*.html'
+          args: --verbose *.md
           # Use different output file path
-          output: /tmp/lychee/out.md
+          #output: /tmp/lychee/out.md
           # Fail action on broken links
           fail: true
 
