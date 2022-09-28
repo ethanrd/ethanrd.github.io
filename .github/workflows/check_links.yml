@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Check links
-        uses: lycheeverse/lychee-action@v1.0.4
+        uses: lycheeverse/lychee-action@v1.5.1
         with:
           args: '*.md *.html  --verbose'
           debug: true
