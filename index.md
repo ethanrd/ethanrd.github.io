@@ -13,4 +13,8 @@ Test: [Unidata](https://www.unidata.ucar.edu)
 
 [Even More](even-more/even-more.md)
 
+<h5><b>Documents</b></h5>
+CF Standard Names <a href="more.html">rules</a>
+CF Standard Names [rules](more.md)
+
 [README](README.md)
